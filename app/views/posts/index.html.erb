@@ -1,0 +1,33 @@
+<h1>Lastest Posts!</h1>
+	
+		
+			<% @posts.reverse.each do |post| %>
+			<ul>
+			
+					<li class="poststyling">
+						
+						
+						<div class="posttitle">
+							
+						<%= link_to post.item, post_path(post) %> 
+					
+						<span id ="timecreated">Posted by: <%= post.user.fname %> on <%= post.created_at.strftime("%b. %d %Y") %> </span>
+
+						</div>
+						<br>
+						<div class="postbodystyling">
+						<%= post.description[0...1000] %> ...
+						</div>
+						
+					
+						<div id="spaceme"></div>
+						<p class="readmore"><%= link_to "Read More...", post_path(post) %></p>
+					</li>
+						</ul>
+				<% end %>
+
+	
+				
+
+				</div>
+

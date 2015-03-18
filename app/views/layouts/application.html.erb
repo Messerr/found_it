@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>FoundItProject</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+	<div class="notice">
+			<% if notice %>
+				<a class="notice"><%= flash[:notice] if flash[:notice] %></a>
+			<% end %>
+			<% if alert %>
+				<a class="alert"><%= flash[:alert] if flash[:alert] %></a>
+			<% end %>
+	</div>
+	<div class='header'>
+			<% if current_user != nil %>
+				Welcome <%= current_user.fname %> |
+				<%= link_to 'Profile', user_path(current_user) %>
+				<%= link_to 'New Item', new_post_path %>
+				<%= link_to 'All Items', posts_path %>
+				<%= link_to 'Edit Profile', edit_user_path(current_user) %>
+				<%= link_to 'Sign Out', logout_path, method: :delete %>
+			<% else %>
+				Welcome, Please sign in or sign up! 
+			<% end %>
+	</div>
+<%= yield %>
+
+</body>
+</html>

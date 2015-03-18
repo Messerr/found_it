@@ -1,0 +1,9 @@
+<div class="showpostbody">
+	<h1><%= @post.item %></h1>
+	<p id="postbodyformat"><%= @post.description %></p>
+	 
+	 <% if current_user == current_post.user %>
+				<%= link_to 'edit', edit_post_path %> |
+				<%= link_to 'delete', post_path, method: :delete, data: {confirm: "Really delete this post?"} %>
+	<% end %> 
+</div>
