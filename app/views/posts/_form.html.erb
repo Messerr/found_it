@@ -11,6 +11,8 @@
 <%= form_for @post do |f| %>
 
 	<%= f.text_field :item, placeholder: "What Did You Find?" %><br />
+
+	<%= f.text_field :location, placeholder: "Where did you find it?" %>
 	
 	<%= f.text_area :description, placeholder: "Enter a description here." %><br />
 	<a><button type="button" class="formbuttons"><%= link_to 'Cancel', posts_path %></button></a>
