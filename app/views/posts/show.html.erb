@@ -3,7 +3,9 @@
 		<h3><%= @post.item %> at <%= @post.location %> Found by: <%= @post.user.fname %></h3>
 	</div>
 	<p><%= @post.description %></p>
-	 
+	<div class="postimage">
+		<%= image_tag @post.avatar.url %>
+	</div>
 	 <% if current_user == current_post.user %>
 				<%= link_to 'edit', edit_post_path %> |
 				<%= link_to 'delete', post_path, method: :delete, data: {confirm: "Really delete this post?"} %>

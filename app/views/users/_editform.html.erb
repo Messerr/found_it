@@ -19,13 +19,10 @@
 
 	<%= f.password_field :password, class: "text_field", placeholder: "Password", value: current_user.password %><br />
 	
-	
 	<%= f.text_area :bio, class: "text_field_big", placeholder: "Bio"  %><br />
 	
-	
-	
+	<%= f.file_field :avatar %>
 
-	
 	<%= f.submit :class => 'formbuttons'%>
 
 	<%= link_to 'Delete Account', user_path(current_user), method: :delete %>

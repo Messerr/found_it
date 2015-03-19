@@ -2,16 +2,29 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.head{
-	text-align: center;
+.profilepageavatar{
+	margin-left: 30px;
 }
 
-.useritems{
-	background-color: #A76767;
-	color: #FFF;
+.useritemwrapper{
+	margin-bottom: 50px;
+	text-align: center;
+	background: #A76767;
+	width: 500px;
+	border-radius: 20px;
+	margin-left: 30%;
+}
+.useritemstitle{
+	
+	background: #7E4343;
+	color: white;
 	width: 500px;
 	text-align: center;
-	margin-left: 30%;
-	border-radius: 20px;
+	border-top-left-radius: 20px;
+	border-top-right-radius: 20px;
+
 }
 
+.userpostsstyle{
+	color: white;
+}

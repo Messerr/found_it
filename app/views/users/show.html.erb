@@ -1,11 +1,17 @@
-<div class="head">
-	<h2>User's found items:</h2>
+<div class="profilepageavatar">
+	<%= image_tag @user.avatar.url(:medium) %>
 </div>
-	<ul>
-	<div class="useritems">
-<% @user.posts.each do |post| %>
- <li><%= link_to post.item, post_path(post)%> at <%= post.location%></li>
- <% end %>
- 	</div>
- 	<ul>
+
+<div class="useritemwrapper">
+	<div class="useritemstitle">
+		<h2><%= @user.fname %>'s found items:</h2>
+	</div>
+	<div class="userpostsstyle">
+<ul>
+	<% @user.posts.each do |post| %>
+ 		<li><%= link_to post.item, post_path(post)%> at <%= post.location%></li>
+ 	<% end %>
+ </ul>
+	</div>
+</div>
 

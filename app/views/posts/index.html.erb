@@ -14,6 +14,9 @@
 						<div class="postbodystyling">
 						<%= post.description[0...1000] %>
 						</div>
+						<div class="postimage">
+							<%= image_tag post.avatar.url %>
+						</div>
 						<div id="spaceme"></div>
 						<p class="readmore"><%= link_to "More", post_path(post) %></p>
 					</li>
