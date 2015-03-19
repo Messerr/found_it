@@ -1,6 +1,11 @@
-<h2>User's found items:</h2>
-<ul>
+<div class="head">
+	<h2>User's found items:</h2>
+</div>
+	<ul>
+	<div class="useritems">
 <% @user.posts.each do |post| %>
  <li><%= link_to post.item, post_path(post)%></li>
  <% end %>
- <ul>
+ 	</div>
+ 	<ul>
+

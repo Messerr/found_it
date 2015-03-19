@@ -17,6 +17,7 @@
 body{
 	margin: 0;
 	top: 0;
+	background-color: #D1AAAA;
 }
 
 .alert{
@@ -31,17 +32,18 @@ ul {
 
 .nav{
 	background-color: white;
-	padding-top: -15px;
+	padding-left: 15px;
+
 }
 
 a:link{
-	color:black;
+	color:#C99191;
 	text-decoration: none;
 }
 a:visited{
-	color: #C99191;
+	color: #DCBCBC;
 	text-decoration: none;
 }
 a:hover{
 	font-weight: bold;
-	}
+}
