@@ -4,7 +4,7 @@
 	<ul>
 	<div class="useritems">
 <% @user.posts.each do |post| %>
- <li><%= link_to post.item, post_path(post)%></li>
+ <li><%= link_to post.item, post_path(post)%> at <%= post.location%></li>
  <% end %>
  	</div>
  	<ul>
