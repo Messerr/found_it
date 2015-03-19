@@ -11,17 +11,19 @@
 
 <%= form_for @user, :html => {:multipart => true} do |f| %>
 	
-	<%= f.text_field :fname, placeholder: "First Name" %><br />
+	<%= f.text_field :fname, class: "text_field", placeholder: "First Name" %><br />
 	
-	<%= f.text_field :lname, placeholder: "First Name" %><br />
+	<%= f.text_field :lname, class: "text_field", placeholder: "Last Name" %><br />
 	
-	<%= f.email_field :email, placeholder: "Email"  %><br />
+	<%= f.email_field :email, class: "text_field", placeholder: "Email"  %><br />
+
+	<%= f.password_field :password, class: "text_field", placeholder: "Password", value: current_user.password %><br />
 	
 	
-	<%= f.text_area :bio, placeholder: "Bio"  %><br />
+	<%= f.text_area :bio, class: "text_field_big", placeholder: "Bio"  %><br />
 	
 	
-	<%= f.password_field :password, placeholder: "Password", value: current_user.password %><br />
+	
 
 	
 	<%= f.submit :class => 'formbuttons'%>

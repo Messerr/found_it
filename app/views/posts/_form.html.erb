@@ -7,16 +7,15 @@
 	
 <%end%>
 
-
-<%= form_for @post do |f| %>
-
-	<%= f.text_field :item, placeholder: "What Did You Find?" %><br />
-
-	<%= f.text_field :location, placeholder: "Where did you find it?" %>
+	<%= form_for @post do |f| %>
 	
-	<%= f.text_area :description, placeholder: "Enter a description here." %><br />
+
+	<%= f.text_field :item, class: "text_field", placeholder: "What Did You Find?"%><br />
+
+	<%= f.text_field :location, class: "text_field", placeholder: "Where did you find it?" %><br />
+	
+	<%= f.text_area :description, class: "text_field_big", placeholder: "Enter a description here." %><br />
 	<a><button type="button" class="formbuttons"><%= link_to 'Cancel', posts_path %></button></a>
 	<%= f.submit :class => "formbuttons"%>
 
-
-<% end %>
+	<% end %>
