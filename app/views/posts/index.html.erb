@@ -1,13 +1,15 @@
 
-<div class='head'><h1>Latest finds!</h1></div>
+<div class='head'>
+	<h1>Latest finds!</h1>
+	</div>
 			<% @posts.reverse.each do |post| %>
 			<ul>
-			<div class='postborder'>
+			<div class="postwrapper">
 					<li class="poststyling">
 						<div class="posttitle">
-						<%= link_to post.item, post_path(post) %> 
+						<%= link_to post.item, post_path(post)%> Found by: <%= post.user.fname %> on <%= post.created_at.strftime("%b. %d %Y") %> at <%= post.location %>
 						</div>
-						<span id ="timecreated">Found by: <%= post.user.fname %> on <%= post.created_at.strftime("%b. %d %Y") %> at <%= post.location %> </span>
+						<span id ="timecreated"> </span>
 						<br>
 						<div class="postbodystyling">
 						<%= post.description[0...1000] %>

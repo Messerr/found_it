@@ -2,15 +2,32 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.postborder{
-	text-align:center;
+body{
+	background-color: #FFECEC;
+}
+
+.postwrapper{
+	text-align: center;
+	background: #A76767;
+	width: 500px;
+	border-radius: 20px;
+	margin-left: 30%;
 }
 .head{
 	text-align: center;
 }
 .posttitle{
 	padding-bottom: 15px;
+	background: #7E4343;
+	color: white;
+	width: 500px;
+	text-align: center;
+	border-top-left-radius: 20px;
+	border-top-right-radius: 20px;
+	padding-top: 10px;
 }
 .postbodystyling{
 	padding-top: 15px;
+	color: white;
 }
+
