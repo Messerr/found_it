@@ -11,17 +11,18 @@
 	
 	<div class='nav'>
 			<% if current_user != nil %>
-				<h3>Welcome <%= current_user.fname %></h3>
-				<%= link_to 'Profile', user_path(current_user) %>
-				<%= link_to 'New Item', new_post_path %>
-				<%= link_to 'All Items', posts_path %>
-				<%= link_to 'Edit Profile', edit_user_path(current_user) %>
+				<h2 style='margin-top: 5px;'>Welcome <%= current_user.fname %></h2>
+				<%= link_to 'Profile', user_path(current_user) %> |
+				<%= link_to 'New Item', new_post_path %> |
+				<%= link_to 'All Items', posts_path %> |
+				<%= link_to 'All Airports', airports_path %> |
+				<%= link_to 'Edit Profile', edit_user_path(current_user) %> |
 				<%= link_to 'Sign Out', logout_path, method: :delete %>
 			<% else %>
-				Welcome, Please sign in or sign up!
+				<h2>Welcome, Please sign in or sign up!</h2>
 			<% end %>
 	</div>
-		<hr />
+		<hr style='margin:0;' />
 	<div class="notice">
 			<% if notice %>
 				<a class="notice"><%= flash[:notice] if flash[:notice] %></a>

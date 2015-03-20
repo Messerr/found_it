@@ -1,0 +1,26 @@
+// Place all the styles related to the Airports controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.airportslistwrapper{
+	text-align: center;
+	background-color: #A76767;
+	width: 500px;
+	margin-left: 30%;
+	border-radius: 20px;
+	color: #FFF;
+	margin-top: 85px;
+
+}
+
+.airportnamelist{
+	background-color: #7E4343;
+	border-top-right-radius: 20px;
+	border-top-left-radius: 20px;
+	color: #FFF;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+a {
+	margin-top: 10px;
+}

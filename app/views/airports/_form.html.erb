@@ -1,0 +1,20 @@
+<% if @airport.errors.any? %>
+	<ul>
+		<% @airport.errors.full_messages.each do |message| %>
+			<li> <%= message %></li>
+		<% end %>
+	</ul>
+	
+<%end%>
+
+	<%= form_for @airport do |f| %>
+	
+
+	<%= f.text_field :name, class: "text_field", placeholder: "Airport Name"%><br />
+
+	<%= f.text_field :state, class: "text_field", placeholder: "State" %><br />
+
+	<a><button type="button" class="formbuttons"><%= link_to 'Cancel', airports_path %></button></a>
+	<%= f.submit :class => "formbuttons"%>
+
+	<% end %>

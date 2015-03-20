@@ -45,6 +45,6 @@ before_action :set_post, only: [:edit, :update, :show, :destroy]
   	end
 
   	def post_params
-  		params.require(:post).permit(:item, :description, :location, :avatar).merge(user_id: current_user.id)
+  		params.require(:post).permit(:item, :description, :location, :avatar, :airport_id, :airport_name).merge(user_id: current_user.id)
   	end
 end

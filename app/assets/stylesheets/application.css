@@ -26,13 +26,16 @@ body{
 
 ul {
     list-style-type: none;
-    margin: 0;
-    padding: 0;
+    margin: 0px;
+    padding: 0px;
 }
 
 .nav{
-	background-color: white;
+	background-color:  #7E4343;
 	padding-left: 15px;
+	color: white;
+	position:fixed;
+	width: 100%;
 
 }
 

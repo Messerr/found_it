@@ -2,11 +2,6 @@ class UsersController < ApplicationController
   before_action :set_user, only: [:edit, :update, :show, :destroy]
   def index
   	@users = User.all
-    if current_user 
-      redirect_to posts_path
-    else
-      
-    end
 
   end
 
@@ -41,9 +36,9 @@ class UsersController < ApplicationController
   end
 
   def destroy
-    @user = current_user
-  	@user.destroy
-  	redirect_to signin_path, notice: "User was deleted."
+    User.find(params[:id]).destroy
+    flash[:success] = "User deleted"
+    redirect_to logout_path
   end
 
   private

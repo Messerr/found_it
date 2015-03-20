@@ -11,7 +11,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150319175213) do
+ActiveRecord::Schema.define(version: 20150319204024) do
+
+  create_table "airports", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string   "name"
+    t.integer  "post_id"
+    t.string   "state"
+  end
 
   create_table "posts", force: :cascade do |t|
     t.string   "item"
@@ -24,6 +32,8 @@ ActiveRecord::Schema.define(version: 20150319175213) do
     t.string   "avatar_content_type"
     t.integer  "avatar_file_size"
     t.datetime "avatar_updated_at"
+    t.integer  "airport_id"
+    t.string   "airport_name"
   end
 
   create_table "users", force: :cascade do |t|

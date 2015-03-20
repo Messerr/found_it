@@ -4,6 +4,8 @@
 
 .profilepageavatar{
 	margin-left: 30px;
+	margin-top: 85px;
+	position: absolute;
 }
 
 .useritemwrapper{
@@ -13,6 +15,7 @@
 	width: 500px;
 	border-radius: 20px;
 	margin-left: 30%;
+	margin-top: 80px;
 }
 .useritemstitle{
 	
@@ -27,4 +30,24 @@
 
 .userpostsstyle{
 	color: white;
+}
+
+.userbiowrapper{
+	margin-bottom: 50px;
+	text-align: center;
+	background: #A76767;
+	width: 300px;
+	border-radius: 20px;
+	margin-left: 2%;
+	margin-top: 350px;
+	color: #FFF;
+	position: absolute;
+}
+.userbiotitle{
+	background: #7E4343;
+	color: white;
+	width: 300px;
+	text-align: center;
+	border-top-left-radius: 20px;
+	border-top-right-radius: 20px;
 }

@@ -1,7 +1,12 @@
 <div class="profilepageavatar">
 	<%= image_tag @user.avatar.url(:medium) %>
 </div>
-
+	<div class="userbiowrapper">
+		<div class="userbiotitle">
+			<h2><%= @user.fname %>'s Bio</h2>
+		</div>
+		<%= @user.bio %>
+	</div>
 <div class="useritemwrapper">
 	<div class="useritemstitle">
 		<h2><%= @user.fname %>'s found items:</h2>
@@ -9,7 +14,7 @@
 	<div class="userpostsstyle">
 <ul>
 	<% @user.posts.each do |post| %>
- 		<li><%= link_to post.item, post_path(post)%> at <%= post.location%></li>
+ 		<li><%= link_to post.item, post_path(post)%> at <%= post.airport_name%></li>
  	<% end %>
  </ul>
 	</div>

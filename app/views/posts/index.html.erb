@@ -7,7 +7,7 @@
 			<div class="postwrapper">
 					<li class="poststyling">
 						<div class="posttitle">
-						<%= link_to post.item, post_path(post)%> Found by: <%= post.user.fname %> on <%= post.created_at.strftime("%b. %d %Y") %> at <%= post.location %>
+						<%= link_to post.item, post_path(post)%> Found by: <%= post.user.fname %> on <%= post.created_at.strftime("%b. %d %Y") %> at <%= post.airport_name %>
 						</div>
 						<span id ="timecreated"> </span>
 						<br>

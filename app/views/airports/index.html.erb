@@ -1,0 +1,13 @@
+
+<div class="airportslistwrapper">
+	<div class="airportnamelist">
+	List of Airports in New York 
+	</div>
+<ul>
+	<% @airports.each do |x| %>
+		<li style="margin-top: 5px;"><%= x.name %></li>
+<% end %>
+</ul>
+<%= link_to 'Add an airport!', new_airport_path %>
+</div>
+
