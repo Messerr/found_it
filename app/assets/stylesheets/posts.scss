@@ -18,6 +18,11 @@ body{
 }
 .head{
 	text-align: center;
+	background-color: #7E4343;
+	width: 500px;
+	border-radius: 20px;
+	margin-left: 30%;
+	color: #FFF;
 }
 .posttitle{
 	padding-bottom: 15px;
@@ -76,4 +81,9 @@ body{
   margin-left: 40%;
 }
 
+.poststatus{
+	text-align: center; 
+	color: #FFF;
+	margin: 0;
 
+}
