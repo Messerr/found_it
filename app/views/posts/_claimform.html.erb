@@ -10,10 +10,10 @@
 	<%= form_for @post, url: post_check_path, method: :post do |f| %>
 	
 	<%= hidden_field_tag :current_post, :value => @post.id %>
-	<%= f.text_field :answer, placeholder: "Answer", value: nil%> <br />
+	<%= f.text_field :answer, placeholder: "Answer", class: "text_field", value: nil%> <br />
 
-	<%= link_to 'Cancel', posts_path %>
-	<%= submit_tag %>
+	<%= link_to 'Back to Posts', posts_path %>
+	<%= submit_tag  'Answer' %>
 
 	<% end %>
 

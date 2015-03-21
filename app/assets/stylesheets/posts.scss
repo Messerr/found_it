@@ -12,7 +12,9 @@ body{
 	width: 500px;
 	border-radius: 20px;
 	margin-left: 30%;
-
+	margin-top: 20px;
+	margin-bottom: 20px;
+	padding-bottom: 10px;
 }
 .head{
 	text-align: center;
@@ -39,7 +41,8 @@ body{
 	margin-left: 30%;
 	border-radius: 20px;
 	color: #FFF;
-	margin-top: 85px;
+	margin-top: 55px;
+
 
 }
 
@@ -54,4 +57,23 @@ body{
 	padding-top: 10px;
 	padding-bottom: 10px;
 }
+.formquestion{
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+.btn {
+  -webkit-border-radius: 28;
+  -moz-border-radius: 28;
+  border-radius: 28px;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 20px;
+  background: #7E4343;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+  width: 50px;	
+  margin-left: 40%;
+}
+
 

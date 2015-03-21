@@ -7,10 +7,18 @@
 			<div class="postwrapper">
 					<li class="poststyling">
 						<div class="posttitle">
-						<%= link_to post.item, post_path(post)%> Found by: <%= post.user.fname %> on <%= post.created_at.strftime("%b. %d %Y") %> at <%= post.airport_name %>
+						<%= link_to post.item, post_path(post)%> 
+						<% if post.user.fname == current_user.fname %>
+						Found by: You on <%= post.created_at.strftime("%b. %d %Y") %> at <%= post.airport_name %>
+						<% else %>
+						Found by: <%= post.user.fname %> on <%= post.created_at.strftime("%b. %d %Y") %> at <%= post.airport_name %>
+						<% end %>
 						</div>
 						<span id ="timecreated"> </span>
 						<br>
+						<div>
+							<h1 style="text-align: center;"><%= post.status %><h1>
+						</div>
 						<div class="postbodystyling">
 						<%= post.description[0...1000] %>
 						</div>
@@ -18,7 +26,9 @@
 							<%= image_tag post.avatar.url(:medium) %>
 						</div>
 						<div id="spaceme"></div>
-						<p class="readmore"><%= link_to "More", post_path(post) %></p>
+						<% if post.status == "Unclaimed" && post.user != current_user  %>
+							<p class="btn"><%= link_to "Claim", post_path(post) %></p>
+						<% end %>
 					</li>
 						</ul>
 				<% end %>

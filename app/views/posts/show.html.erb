@@ -6,10 +6,25 @@
 	<div class="postimage">
 		<%= image_tag @post.avatar.url(:medium) %>
 	</div>
+	
+	<% if @post.user.fname == current_user.fname %>
+	<h5 style="text-align: left; padding-left: 5px; bottom: 0;">Found by: You</h5>
+	<% else %>
 	<h5 style="text-align: left; padding-left: 5px; bottom: 0;">Found by: <%= @post.user.fname %></h5>
-	 <% if current_user == current_post.user %>
-				<%= link_to 'edit', edit_post_path %> |
+	<% end %>
+	 <% if  @post.status == "Claimed" && current_user == current_post.user %>
 				<%= link_to 'delete', post_path, method: :delete, data: {confirm: "Really delete this post?"} %>
+	<% elsif current_user == current_post.user %>
+		<%= link_to 'edit', edit_post_path %> |
+		<%= link_to 'delete', post_path, method: :delete, data: {confirm: "Really delete this post?"} %>
+
 	<% end %> 
+	<% if @post.user != current_user && @post.status == "Unclaimed" %>
+	<div class='formquestion'>
+	<%= @post.question %>
+	</div>
+	<div class='formbox'>
 	<%= render 'claimform' %>
+	<% end %>
+	</div>
 </div>

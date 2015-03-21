@@ -21,7 +21,7 @@ before_action :set_post, only: [:edit, :update, :show, :destroy]
 
   def create 
   	@post = Post.new(post_params)
-    @post.status = 'unclaimed'
+    @post.status = 'Unclaimed'
   	if @post.save
   		redirect_to @post, notice: "New post created"
   	else
@@ -47,7 +47,9 @@ before_action :set_post, only: [:edit, :update, :show, :destroy]
       check_post = Post.find(the_post)
 
       if check_post.answer == params_answer
-        flash[:notice] = "THATS RIGHT!"
+        flash[:notice] = "#{check_post.user.fname}" + " " + "has been notified!"
+        check_post.status = "Claimed"
+        check_post.save
       else
         flash[:notice] = "WOMP! THATS WRONG!"
       end
