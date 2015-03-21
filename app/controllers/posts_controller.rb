@@ -21,6 +21,7 @@ before_action :set_post, only: [:edit, :update, :show, :destroy]
 
   def create 
   	@post = Post.new(post_params)
+    @post.status = 'unclaimed'
   	if @post.save
   		redirect_to @post, notice: "New post created"
   	else
@@ -38,6 +39,29 @@ before_action :set_post, only: [:edit, :update, :show, :destroy]
       redirect_to @post, notice: "Post succesfully updated."
     end
 
+    def check
+      post_id_param = params[:current_post]
+      post_id = post_id_param.split('>').last
+      the_post = post_id.at(0..1)
+      params_answer = params[:post][:answer]
+      check_post = Post.find(the_post)
+
+      if check_post.answer == params_answer
+        flash[:notice] = "THATS RIGHT!"
+      else
+        flash[:notice] = "WOMP! THATS WRONG!"
+      end
+ redirect_to post_path(the_post)
+
+      
+
+       
+
+
+
+     
+    end
+
   	private
 
   	def set_post 
@@ -45,6 +69,6 @@ before_action :set_post, only: [:edit, :update, :show, :destroy]
   	end
 
   	def post_params
-  		params.require(:post).permit(:item, :description, :location, :avatar, :airport_id, :airport_name).merge(user_id: current_user.id)
+  		params.require(:post).permit(:item, :description, :location, :avatar, :airport_id, :airport_name, :status, :question, :answer).merge(user_id: current_user.id)
   	end
 end

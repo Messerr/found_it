@@ -7,6 +7,8 @@ Rails.application.routes.draw do
   get '/signin', to: 'sessions#new'
   post '/signin', to: 'sessions#create'
   delete '/logout', to: 'sessions#destroy'
+  post '/post_check', to: 'posts#check'
+
  
 
   root 'users#index'

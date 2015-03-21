@@ -7,11 +7,9 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-	
-	
 	<div class='nav'>
 			<% if current_user != nil %>
-				<h2 style='margin-top: 5px;'>Welcome <%= current_user.fname %></h2>
+				<h2 style='margin-top: 0px;'>Welcome <%= current_user.fname %></h2>
 				<%= link_to 'Profile', user_path(current_user) %> |
 				<%= link_to 'New Item', new_post_path %> |
 				<%= link_to 'All Items', posts_path %> |
@@ -19,19 +17,10 @@
 				<%= link_to 'Edit Profile', edit_user_path(current_user) %> |
 				<%= link_to 'Sign Out', logout_path, method: :delete %>
 			<% else %>
-				<h2>Welcome, Please sign in or sign up!</h2>
+				<h2 style='margin-top: 0px;'>Welcome, Please sign in or sign up!</h2>
 			<% end %>
 	</div>
-		<hr style='margin:0;' />
-	<div class="notice">
-			<% if notice %>
-				<a class="notice"><%= flash[:notice] if flash[:notice] %></a>
-			<% end %>
-			<% if alert %>
-				<a class="alert"><%= flash[:alert] if flash[:alert] %></a>
-			<% end %>
-	</div>
-	
+	<%= flash[:notice] if flash[:notice] %>
 <%= yield %>
 
 </body>

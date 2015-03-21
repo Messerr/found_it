@@ -18,6 +18,10 @@
 
 	<%= f.text_area :description, class: "text_field_big", placeholder: "Enter a description here." %><br />
 
+	<%= f.text_area :question, class: "text_field", placeholder: "Enter a validation question here." %><br />
+
+	<%= f.text_area :answer, class: "text_field", placeholder: "Enter the answer here." %><br />
+
 	 <%= f.collection_select :airport_name, Airport.order(:name),:name, :name, include_blank: false, prompt: "Airport" %>
 
 	<%= f.file_field :avatar %>

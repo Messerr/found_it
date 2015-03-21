@@ -1,0 +1,19 @@
+<% if @post.errors.any? %>
+	<ul>
+		<% @post.errors.full_messages.each do |message| %>
+			<li> <%= message %></li>
+		<% end %>
+	</ul>
+	
+<%end%>
+
+	<%= form_for @post, url: post_check_path, method: :post do |f| %>
+	
+	<%= hidden_field_tag :current_post, :value => @post.id %>
+	<%= f.text_field :answer, placeholder: "Answer", value: nil%> <br />
+
+	<%= link_to 'Cancel', posts_path %>
+	<%= submit_tag %>
+
+	<% end %>
+
