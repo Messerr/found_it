@@ -3,7 +3,9 @@
 <h2 style='margin: 0;'><%= @airport.name %></h2> <br />
 <h3 style='margin: 0;'><%= @airport.state %></h3>
 </div>
+<ul>
 <% @airport.posts.each do |p| %>
- <%= link_to p.item, post_path(p) %> | <%= p.status %>
+ <li><%= link_to p.item, post_path(p) %> | <%= p.status %></li>
 <% end %>
+</ul>
 </div> 

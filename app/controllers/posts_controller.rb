@@ -2,6 +2,7 @@ class PostsController < ApplicationController
 before_action :set_post, only: [:edit, :update, :show, :destroy]
   def index
   	@posts = Post.all
+
   end
 
   def new
@@ -34,6 +35,7 @@ before_action :set_post, only: [:edit, :update, :show, :destroy]
   		redirect_to posts_path, notice: "Post deleted"
   	end
 
+
     def update
       @post.update(post_params)
       redirect_to @post, notice: "Post succesfully updated."
@@ -55,13 +57,6 @@ before_action :set_post, only: [:edit, :update, :show, :destroy]
       end
  redirect_to post_path(the_post)
 
-      
-
-       
-
-
-
-     
     end
 
   	private

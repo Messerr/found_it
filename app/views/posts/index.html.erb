@@ -9,9 +9,9 @@
 						<div class="posttitle">
 						<%= link_to post.item, post_path(post)%> 
 						<% if post.user.fname == current_user.fname %>
-						Found by: You <%= time_ago_in_words(post.created_at) %> ago at <%= post.airport.name %>
+						You found this <%= time_ago_in_words(post.created_at) %> ago at <%= link_to post.airport.name, airport_path(post.airport.id) %>
 						<% else %>
-						Found by: <%= post.user.fname %> on <%= post.created_at.strftime("%b. %d %Y") %> at <%= post.airport.name %>
+						<%= post.user.fname %> found this <%= time_ago_in_words(post.created_at) %> ago at <%= link_to post.airport.name, airport_path(post.airport.id) %>
 						<% end %>
 						</div>
 						<span id ="timecreated"> </span>

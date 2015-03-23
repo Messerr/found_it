@@ -41,6 +41,8 @@ class UsersController < ApplicationController
     redirect_to logout_path
   end
 
+  
+
   private
 
   def current_user

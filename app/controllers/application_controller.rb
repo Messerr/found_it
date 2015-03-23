@@ -14,4 +14,6 @@ class ApplicationController < ActionController::Base
   	def current_airport
   		params[:id] ? Airport.find(params[:id]) : nil
   	end
+
+  
 end
