@@ -66,6 +66,10 @@ before_action :set_post, only: [:edit, :update, :show, :destroy]
 
   	private
 
+    def current_airport
+      params[:id] ? Airport.find(params[:id]) : nil
+    end
+
   	def set_post 
   		@post = Post.find(params[:id])
   	end

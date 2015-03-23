@@ -5,9 +5,9 @@
 	</div>
 <ul>
 	<% @airports.each do |x| %>
-		<li style="margin-top: 5px;"><%= x.name %></li>
+		<li style="margin-top: 5px;"><%=link_to x.name, airport_path(x) %></li>
 <% end %>
-</ul>
-<%= link_to 'Add an airport!', new_airport_path %>
+</ul><br />
+<div class='formbuttons'><%= link_to 'Add an airport!', new_airport_path %></div>
 </div>
 

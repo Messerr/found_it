@@ -14,7 +14,7 @@
 	<div class="userpostsstyle">
 <ul>
 	<% @user.posts.each do |post| %>
- 		<li><%= link_to post.item, post_path(post)%> at <%= post.airport_name%> - <%= post.status %></li>
+ 		<li><%= link_to post.item, post_path(post)%> at <%= post.airport.name%> - <%= post.status %></li>
  	<% end %>
  </ul>
 	</div>

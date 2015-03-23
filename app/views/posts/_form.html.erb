@@ -12,7 +12,7 @@
 
 	<%= f.text_field :item, class: "text_field", placeholder: "What Did You Find?"%><br />
 
-	<!--<%= f.text_field :location, class: "text_field", placeholder: "Where did you find it?" %><br /> -->
+	<%= f.text_field :location, class: "text_field", placeholder: "Where did you find it?" %><br /> 
 	
 
 
@@ -22,7 +22,7 @@
 
 	<%= f.text_area :answer, class: "text_field", placeholder: "Enter the answer here." %><br />
 
-	 <%= f.collection_select :airport_name, Airport.order(:name),:name, :name, include_blank: false, prompt: "Airport" %>
+	 <%= f.collection_select :airport_id, Airport.order(:name),:id, :name, include_blank: false, prompt: "Airport" %>
 
 	<%= f.file_field :avatar %>
 

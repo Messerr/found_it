@@ -8,7 +8,7 @@ body{
 
 .postwrapper{
 	text-align: center;
-	background: #A76767;
+	background: #AEAEBF;
 	width: 500px;
 	border-radius: 20px;
 	margin-left: 30%;
@@ -18,7 +18,7 @@ body{
 }
 .head{
 	text-align: center;
-	background-color: #7E4343;
+	background-color: #3A3A40;
 	width: 500px;
 	border-radius: 20px;
 	margin-left: 30%;
@@ -26,7 +26,7 @@ body{
 }
 .posttitle{
 	padding-bottom: 15px;
-	background: #7E4343;
+	background: #3A3A40;
 	color: white;
 	width: 500px;
 	text-align: center;
@@ -41,7 +41,7 @@ body{
 
 .userpostwrapper{
 	text-align: center;
-	background-color: #A76767;
+	background-color: #AEAEBF;
 	width: 500px;
 	margin-left: 30%;
 	border-radius: 20px;
@@ -52,7 +52,7 @@ body{
 }
 
 .userposttitle{
-	background-color: #7E4343;
+	background-color: #3A3A40;
 	border-top-right-radius: 20px;
 	border-top-left-radius: 20px;
 	color: #FFF;
@@ -61,6 +61,7 @@ body{
 .postimage{
 	padding-top: 10px;
 	padding-bottom: 10px;
+	border-radius: 20px;
 }
 .formquestion{
 	padding-top: 10px;
@@ -72,18 +73,22 @@ body{
   -moz-border-radius: 28;
   border-radius: 28px;
   font-family: Arial;
-  color: #ffffff;
+  color: #FFF;
   font-size: 20px;
-  background: #7E4343;
+  background: #3A3A40;
   padding: 10px 20px 10px 20px;
   text-decoration: none;
   width: 50px;	
-  margin-left: 40%;
+  margin-left: 41%;
 }
 
 .poststatus{
 	text-align: center; 
 	color: #FFF;
 	margin: 0;
-
+}
+.poststatusun{
+	text-align: center;
+	color: #E5000B;
+	margin: 0;
 }

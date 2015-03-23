@@ -8,6 +8,8 @@ module ApplicationHelper
   	 params[:id] ? Post.find(params[:id]) : nil
   	end
 
-  	
+  	def current_airport
+  		params[:id] ? Airport.find(params[:id]) : nil
+  	end
 
 end

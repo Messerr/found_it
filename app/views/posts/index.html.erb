@@ -9,16 +9,22 @@
 						<div class="posttitle">
 						<%= link_to post.item, post_path(post)%> 
 						<% if post.user.fname == current_user.fname %>
-						Found by: You on <%= post.created_at.strftime("%b. %d %Y") %> at <%= post.airport_name %>
+						Found by: You <%= time_ago_in_words(post.created_at) %> ago at <%= post.airport.name %>
 						<% else %>
-						Found by: <%= post.user.fname %> on <%= post.created_at.strftime("%b. %d %Y") %> at <%= post.airport_name %>
+						Found by: <%= post.user.fname %> on <%= post.created_at.strftime("%b. %d %Y") %> at <%= post.airport.name %>
 						<% end %>
 						</div>
 						<span id ="timecreated"> </span>
 						<br>
-						<div class='poststatus'>
-							<h1><%= post.status %><h1>
+						<% if post.status == "Unclaimed" %>
+						<div class='poststatusun'>
+							<h2><%= post.status %></h2>
 						</div>
+						<% else %>
+							<div class='poststatus'>
+								<h2><%= post.status %><h2>
+							</div>
+						<% end %>
 						<div class="postbodystyling">
 						<%= post.description[0...1000] %>
 						</div>

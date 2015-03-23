@@ -1,2 +1,9 @@
-<%= @airport.name %>
-<%= @airport.state %>
+<div class="airportslistwrapper">
+	<div class="airportnamelist">
+<h2 style='margin: 0;'><%= @airport.name %></h2> <br />
+<h3 style='margin: 0;'><%= @airport.state %></h3>
+</div>
+<% @airport.posts.each do |p| %>
+ <%= link_to p.item, post_path(p) %> | <%= p.status %>
+<% end %>
+</div> 
