@@ -19,6 +19,8 @@ body{
 	top: 0;
 	background-color: #E8E8FF;
 	font-family: 'Roboto', sans-serif;
+
+
 }
 
 .alert{
@@ -37,7 +39,7 @@ ul {
 	color: white;
 	margin-top: 0px;
 	width: 100%;
-
+	z-index:1;
 }
 
 a:link{
@@ -66,4 +68,8 @@ a:hover{
 	background-color: #3A3A40;
 	color:#FFF4DC;
 	border-radius: 20px;
+}
+#big-video-wrap{
+	z-index:-1;
+	position: absolute;
 }

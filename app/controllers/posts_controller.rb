@@ -52,10 +52,12 @@ before_action :set_post, only: [:edit, :update, :show, :destroy]
         flash[:notice] = "#{check_post.user.fname}" + " " + "has been notified!"
         check_post.status = "Claimed"
         check_post.save
+        render "/conversations/return_item"
       else
         flash[:notice] = "WOMP! THATS WRONG!"
+        redirect_to post_path(the_post)
       end
- redirect_to post_path(the_post)
+ 
 
     end
 

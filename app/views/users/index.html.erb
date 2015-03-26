@@ -1,6 +1,14 @@
-<div class="userpostwrapper">
+<script type="text/javascript">
+		$(function() {
+		    var BV = new $.BigVideo();
+		    BV.init();
+		    BV.show('http://ia601605.us.archive.org/0/items/NycTrafficTimeLapse/NycTrafficH264.mp4',{ambient:true});
+		});
+   </script>
+<div class="userpostwrapper" style='z-index:1'>
 	<div class="userposttitle">
 <h1>Log in</h1>
 	</div>
 	<%= render 'shared/login' %>
 </div>
+

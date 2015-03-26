@@ -1,0 +1,24 @@
+// Place all the styles related to the Conversations controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.userconvowrap{
+	text-align: center;
+	background: #AEAEBF;
+	width: 500px;
+	border-radius: 20px;
+	margin-left: 30%;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	padding-bottom: 10px;
+}
+.userconvobody{
+	padding-bottom: 15px;
+	background: #3A3A40;
+	color: white;
+	width: 500px;
+	text-align: center;
+	border-top-left-radius: 20px;
+	border-top-right-radius: 20px;
+	padding-top: 10px;
+}

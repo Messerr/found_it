@@ -5,7 +5,8 @@
 		<div class="userbiotitle">
 			<h2 style='margin: 0;'>About <%= @user.fname %></h2>
 		</div>
-		<%= @user.bio %>
+		<p><%= @user.bio %>
+		<p><%= @user.email %>
 	</div>
 <div class="useritemwrapper">
 	<div class="useritemstitle">
@@ -14,9 +15,10 @@
 	<div class="userpostsstyle">
 <ul>
 	<% @user.posts.each do |post| %>
- 		<li><%= link_to post.item, post_path(post)%> at <%= post.airport.name%> - <%= post.status %></li>
+ 		<li><%= link_to post.item, post_path(post)%> at <%=link_to post.airport.name, airport_path(post.airport.id)%> - <%= post.status %></li>
  	<% end %>
  </ul>
 	</div>
 </div>
+
 

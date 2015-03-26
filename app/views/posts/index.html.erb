@@ -11,7 +11,7 @@
 						<% if post.user.fname == current_user.fname %>
 						You found this <%= time_ago_in_words(post.created_at) %> ago at <%= link_to post.airport.name, airport_path(post.airport.id) %>
 						<% else %>
-						<%= post.user.fname %> found this <%= time_ago_in_words(post.created_at) %> ago at <%= link_to post.airport.name, airport_path(post.airport.id) %>
+						<%= link_to post.user.fname, user_path(post.user.id) %> found this <%= time_ago_in_words(post.created_at) %> ago at <%= link_to post.airport.name, airport_path(post.airport.id) %>
 						<% end %>
 						</div>
 						<span id ="timecreated"> </span>

@@ -1,0 +1,8 @@
+<ul>
+<%= form_for :message, url: reply_conversation_path(conversation) do |f| %>
+  <li><%= f.text_field :subject, class: "text_field", value: conversation.subject, placeholder: 'Subject' %></li>
+  <li><%= f.text_area :body, class: "text_field", placeholder: 'Reply!' %></li>
+    <%= f.submit %>
+    <%= link_to 'Cancel', conversations_path %>
+    <% end %>
+ </ul>

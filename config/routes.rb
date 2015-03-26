@@ -1,8 +1,17 @@
 Rails.application.routes.draw do
+ default_url_options :host => "example.com"
 
  resources :users 
-  resources :posts
+ resources :posts
  resources :airports
+
+ resources :conversations, only: [:index, :show, :new, :create] do
+    member do
+      post :reply
+      post :trash
+      post :untrash
+    end
+  end
 
   get '/signin', to: 'sessions#new'
   post '/signin', to: 'sessions#create'

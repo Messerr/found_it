@@ -2,6 +2,7 @@ class AirportsController < ApplicationController
   before_action :set_airport, only: [:edit, :update, :show, :destroy]
   def index
   	@airports = Airport.all
+    
   end
 
   def new
@@ -18,6 +19,8 @@ class AirportsController < ApplicationController
   	@airport = Airport.new(airport_params)
   	if @airport.save
   		redirect_to airports_path, notice: "New airport created"
+    else
+      render :form
   	end
   end
 

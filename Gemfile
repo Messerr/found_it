@@ -2,7 +2,10 @@ source 'https://rubygems.org'
 
 gem "paperclip", "~> 4.2"
 gem 'sidekiq'
-gem 'rufus-scheduler'
+gem 'mailboxer'
+gem 'jquery-ui-rails'
+gem 'videojs_rails'
+gem 'imagesLoaded_rails'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.0'
