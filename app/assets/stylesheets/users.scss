@@ -54,4 +54,27 @@
 	border-top-left-radius: 20px;
 	border-top-right-radius: 20px;
 }
-
+.column-wrapper{
+	background-color: #3A3A40;
+	color: #FFF;
+	opacity: 0.75;
+	margin-top: 20px;
+	height: 420px;
+}
+.column1{
+	display: inline;
+	float: left;
+	background-color: #3A3A40;
+	width: 33%;
+	text-align: center;
+}
+.column2{
+	display: inline;
+	float: left;
+	background-color: #3A3A40;
+	width: 33%;
+	text-align: center;
+}
+.column3{
+	text-align: center;
+}
