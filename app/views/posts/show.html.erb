@@ -13,10 +13,10 @@
 	<h5 style="text-align: left; padding-left: 5px; bottom: 0;">Found by: <%= @post.user.fname %></h5>
 	<% end %>
 	 <% if  @post.status == "Claimed" && current_user == current_post.user %>
-				<%= link_to 'delete', post_path, method: :delete, data: {confirm: "Really delete this post?"} %>
+				<%= link_to '<i class="fa fa-minus-circle fa-2x"></i>'.html_safe, post_path, method: :delete, data: {confirm: "Really delete this post?"} %>
 	<% elsif current_user == current_post.user %>
-		<%= link_to 'edit', edit_post_path %> |
-		<%= link_to 'delete', post_path, method: :delete, data: {confirm: "Really delete this post?"} %>
+		<%= link_to '<i class="fa fa-pencil fa-2x"></i>'.html_safe, edit_post_path %>  
+		<%= link_to '<i class="fa fa-minus-circle fa-2x"></i>'.html_safe, post_path, method: :delete, data: {confirm: "Really delete this post?"} %>
 
 	<% end %> 
 	<% if @post.user != current_user && @post.status == "Unclaimed" %>

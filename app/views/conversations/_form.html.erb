@@ -4,7 +4,9 @@
   <li><%= f.text_field :subject, class: "text_field", placeholder: "Subject" %></li>
   <li><%= f.text_area :body, class: "text_field_big", placeholder: "Message Here!" %></li>
   
-   <%= f.submit %>
-    <%= link_to 'Cancel', conversations_path %>
+ 
+  	<li><%= f.submit 'Send' %><li>
+
+    <li><%= link_to '<i class="fa fa-arrow-circle-left fa-2x"></i>'.html_safe, conversations_path %></li>
 
   <% end %>

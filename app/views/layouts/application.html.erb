@@ -5,6 +5,7 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
   <%= csrf_meta_tags %>
 </head>
 <body>
@@ -16,13 +17,18 @@
 				<%= link_to 'All Items', posts_path %> |
 				<%= link_to 'All Airports', airports_path %> |
 				<%= link_to 'Edit Profile', edit_user_path(current_user) %> |
-				<%= link_to 'Inbox', :conversations %> |
+				<%= link_to 'Inbox' + " " + current_user.mailbox.inbox(:unread => true).count(:id, :distinct => true).to_s, :conversations %> |
 				<%= link_to 'Sign Out', logout_path, method: :delete %>
 			<% else %>
 				<h2 style='margin-top: 0px;'>Welcome, Please sign in or sign up!</h2>
 			<% end %>
 	</div>
-	<%= flash[:notice] if flash[:notice] %>
+	<div class='notice'>
+		<%= flash[:notice] if flash[:notice] %>
+	</div>
+	<div class='alert'>
+		<%= flash[:alert] if flash[:alert] %>
+	</div>
 <%= yield %>
 
 </body>

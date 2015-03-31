@@ -5,9 +5,10 @@
   <%= content_tag_for(:li, conversation.receipts_for(current_user)) do |receipt| %>
      <% message = receipt.message %>
      <% if current_user.fname == receipt.message.sender.name %>
-     	You: <%= message.body %></p>
+
+     	<p style='color: black;'>You: <%= message.body %></p>
      <% else %>
-     	<%= receipt.message.sender.name %>: <%= message.body %>
+     	<p style='color: white;'><%= receipt.message.sender.name %>: <%= message.body %>
  	<% end %>
   <% end %>
 <%= render '/messages/form', conversation: conversation %>

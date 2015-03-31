@@ -18,11 +18,11 @@
 						<br>
 						<% if post.status == "Unclaimed" %>
 						<div class='poststatusun'>
-							<h2><%= post.status %></h2>
+							<h2><%= post.status %> <i class="fa fa-times-circle fa-2x"></i></h2>
 						</div>
 						<% else %>
 							<div class='poststatus'>
-								<h2><%= post.status %><h2>
+								<h2><%= post.status %> <i class="fa fa-check-circle fa-2x"></i><h2>
 							</div>
 						<% end %>
 						<div class="postbodystyling">
