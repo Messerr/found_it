@@ -6,12 +6,12 @@
 <h2> Inbox </h2>
 	<%= render collection: mailbox.inbox, partial: 'conversation' %>
 
-	<h2> Sentbox</h2></li>
-	<%= render collection: mailbox.sentbox, partial: 'conversation' %>
+	<!-- <h2> Sentbox</h2></li>
+	<%= render collection: mailbox.sentbox, partial: 'conversation' %> -->
 
-	<!-- <h2> Trash </h2>
-	<%= render collection: mailbox.trash, partial: 'conversation' %> -->
-
+	 <h2> Trash </h2>
+	<%= render collection: mailbox.trash, partial: 'conversation' %> 
+ 
 		<%= link_to '<i class="fa fa-comments fa-4x"></i>'.html_safe, :new_conversation %>
 
 </div>

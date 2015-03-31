@@ -53,6 +53,7 @@ ul {
 	padding-bottom: 5px;
 	position: fixed;
 	top:0;
+	letter-spacing: 1px;
 }
 
 a:link{
@@ -86,3 +87,4 @@ a:hover{
 	z-index:-1;
 	position: absolute;
 }
+

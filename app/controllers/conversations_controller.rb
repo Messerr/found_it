@@ -33,6 +33,7 @@ class ConversationsController < ApplicationController
 
   def conversation
     @conversation ||= mailbox.conversations.find(params[:id])
+ 
   end
 
   def conversation_params(*keys)

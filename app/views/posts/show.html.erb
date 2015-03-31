@@ -3,6 +3,16 @@
 		<h3><%= @post.item %> at <%= @post.airport.name%> Status: <%= @post.status %></h3>
 	</div>
 	<p><%= @post.description %></p>
+	<% if @post.status == "Unclaimed" %>
+		<div class='poststatusun'>
+			<h1><%= @post.status %> <i class="fa fa-times-circle fa-2x"></i></h1>
+		</div>
+	<% elsif @post.status == "Claimed"%>
+		<div class='poststatus'>
+			<h1><%= @post.status %> <i class="fa fa-check-circle fa-2x"></h1>
+		</div>
+	<% end %>
+
 	<div class="postimage">
 		<%= image_tag @post.avatar.url(:medium) %>
 	</div>
@@ -17,7 +27,6 @@
 	<% elsif current_user == current_post.user %>
 		<%= link_to '<i class="fa fa-pencil fa-2x"></i>'.html_safe, edit_post_path %>  
 		<%= link_to '<i class="fa fa-minus-circle fa-2x"></i>'.html_safe, post_path, method: :delete, data: {confirm: "Really delete this post?"} %>
-
 	<% end %> 
 	<% if @post.user != current_user && @post.status == "Unclaimed" %>
 	<div class='formquestion'>
@@ -25,6 +34,8 @@
 	</div>
 <div class='formbox'>
 	<%= render 'claimform' %>
-	<% end %>	
+	<% end %>
+    <li><%= link_to '<i class="fa fa-arrow-circle-left fa-2x"></i>'.html_safe, posts_path %></li>	
 	</div>
-</div>
+
+

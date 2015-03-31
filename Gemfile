@@ -6,6 +6,7 @@ gem 'mailboxer'
 gem 'jquery-ui-rails'
 gem 'videojs_rails'
 gem 'imagesLoaded_rails'
+gem 'whenever', :require => false
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.0'
